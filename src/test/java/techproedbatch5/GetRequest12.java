@@ -1,5 +1,6 @@
 package techproedbatch5;
 
+import com.google.gson.Gson;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -40,5 +41,10 @@ public class GetRequest12 extends TestBase {
                 "wrong title description");
 
         softAssert.assertAll();
+
+        // Java object i json formatina cevirme
+
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(listOfMap)); // Serialization
     }
 }

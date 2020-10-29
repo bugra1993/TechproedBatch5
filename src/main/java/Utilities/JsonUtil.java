@@ -22,7 +22,7 @@ public class JsonUtil {
 
     // java object ini JSon format ina ceviren method.
 
-    public static String covertJavaToJson(Object object) {// veri tipi olarak ne yazarsak onu Json formatina cevirir
+    public static String convertJavaToJson(Object object) {// veri tipi olarak ne yazarsak onu Json formatina cevirir
         String jsonResult = "";
         try {
             jsonResult = mapper.writeValueAsString(object);//Json objesi Json formatina cevrildi. Olusabilecek hatalar icin
@@ -41,7 +41,7 @@ public class JsonUtil {
 
     //public static Object covertJsonToJava() {   }
 
-    public static <T> T covertJsonToJava(String json, Class<T> cls) {
+    public static <T> T convertJsonToJava(String json, Class<T> cls) {
         // Generic bir method urettik. Bu method ile Json formatini cevirmek istedigimiz format a gore cevirecegiz.
         // return type method kullanilirken belirtiliyor.
 

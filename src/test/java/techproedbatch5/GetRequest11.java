@@ -1,5 +1,6 @@
 package techproedbatch5;
 
+import com.google.gson.Gson;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -57,6 +58,11 @@ public class GetRequest11 extends TestBase {
         softAssert.assertEquals(map.get("id"), 2, "Id 2 degil");
 
         softAssert.assertAll();
+
+        // Map objesini json formatina cevirme
+
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(map));
 
 
     }

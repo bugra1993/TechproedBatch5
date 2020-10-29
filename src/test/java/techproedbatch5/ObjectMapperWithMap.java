@@ -25,7 +25,7 @@ public class ObjectMapperWithMap extends TestBase {
 
         //map objesini Json formatina cevirelim ==> Serialization
 
-        String jsonFormMap = JsonUtil.covertJavaToJson(map);
+        String jsonFormMap = JsonUtil.convertJavaToJson(map);
         System.out.println(jsonFormMap);
 
 
@@ -44,7 +44,7 @@ public class ObjectMapperWithMap extends TestBase {
 
         //Object Mapper class ile bu json data yi map e Java map formatina cevirelim.
 
-        Map<String, Object> jsonToMapApi = JsonUtil.covertJsonToJava(response.asString(), Map.class);
+        Map<String, Object> jsonToMapApi = JsonUtil.convertJsonToJava(response.asString(), Map.class);
 
         System.out.println(jsonToMapApi);
 

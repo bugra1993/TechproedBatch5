@@ -11,9 +11,9 @@ public class Booking {
     @JsonProperty("lastname")
     private String lastname;
     @JsonProperty("totalprice")
-    private Integer totalprice;
+    private int totalprice;
     @JsonProperty("depositpaid")
-    private Boolean depositpaid;
+    private boolean depositpaid;
     @JsonProperty("bookingdates")
     private BookingDates bookingdates;
     @JsonProperty("additionalneeds")
@@ -41,22 +41,22 @@ public class Booking {
     }
 
     @JsonProperty("totalprice")
-    public Integer getTotalprice() {
+    public int getTotalprice() {
         return totalprice;
     }
 
     @JsonProperty("totalprice")
-    public void setTotalprice(Integer totalprice) {
+    public void setTotalprice(int totalprice) {
         this.totalprice = totalprice;
     }
 
     @JsonProperty("depositpaid")
-    public Boolean getDepositpaid() {
+    public boolean getDepositpaid() {
         return depositpaid;
     }
 
     @JsonProperty("depositpaid")
-    public void setDepositpaid(Boolean depositpaid) {
+    public void setDepositpaid(boolean depositpaid) {
         this.depositpaid = depositpaid;
     }
 

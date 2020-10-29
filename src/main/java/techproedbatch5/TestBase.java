@@ -18,6 +18,10 @@ public class TestBase {
     protected RequestSpecification spec01;
     protected RequestSpecification spec02;
     protected RequestSpecification spec03;
+    protected JSONObject jsonBookingDatesBody;
+    protected JSONObject jsonRequestBody;
+    protected Map bookingDatesMap;
+    protected Map<String, Object> requestBodyMap;
 
     @Before
     public void setup01() {
@@ -42,13 +46,13 @@ public class TestBase {
 
     protected Response createRequestBodyByJsonObjectClass() {
 
-        JSONObject jsonBookingDatesBody = new JSONObject();
+        jsonBookingDatesBody = new JSONObject();
 
 
         jsonBookingDatesBody.put("checkin", "2020-05-202");
         jsonBookingDatesBody.put("checkout", "2020-05-05");
 
-        JSONObject jsonRequestBody = new JSONObject();
+        jsonRequestBody = new JSONObject();
 
         jsonRequestBody.put("firstname", "Hasan");
         jsonRequestBody.put("lastname", "Kara");
@@ -72,12 +76,12 @@ public class TestBase {
     }
 
     protected Response createRequestBodyMap() {
-        Map bookingDatesMap = new HashMap<>();
+        bookingDatesMap = new HashMap<>();
 
         bookingDatesMap.put("checkin", "2020-05-02");
         bookingDatesMap.put("checkout", "2020-05-05");
 
-        Map<String, Object> requestBodyMap = new HashMap<>();
+        requestBodyMap = new HashMap<>();
 
         requestBodyMap.put("firstname", "Hasan");
         requestBodyMap.put("lastname", "Kara");

@@ -19,7 +19,7 @@ public class ObjectMapperWithPojo extends TestBase {
         System.out.println(bookingDates);
 
 
-        String jsonFromPojo = JsonUtil.covertJavaToJson(bookingDates);
+        String jsonFromPojo = JsonUtil.convertJavaToJson(bookingDates);
         System.out.println(jsonFromPojo);
 
     }
@@ -30,7 +30,7 @@ public class ObjectMapperWithPojo extends TestBase {
         //response.prettyPrint();
         // Json data yi pojo class i ile java formatina cevirecegiz.
 
-        Booking jsonToPojoApi = JsonUtil.covertJsonToJava(response.asString(), Booking.class);
+        Booking jsonToPojoApi = JsonUtil.convertJsonToJava(response.asString(), Booking.class);
 
         System.out.println(jsonToPojoApi);
 
